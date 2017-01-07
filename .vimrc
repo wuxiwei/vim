@@ -49,11 +49,14 @@ set hlsearch
 set nowrap
 "设置快捷键前最，即<Leader>
 let mapleader=":"
-"选中状态下 Ctrl+c 复制
-vmap <C-c> "+y"
-"配置文件.vimrc更改后自动重新载入使设置生效
+"设置快捷键将选中文本块复制到系统剪贴板
+map <Leader>y "+y
+"设置快捷键将系统剪贴板内容粘帖到vim
+map <Leader>p "+p
 noremap <F9> :!ctags -R<CR>
-" set tags+=./tags
+"设置tags文件为当前目录下的tags，默认情况也是
+"set tags+=./tags
+"配置文件.vimrc更改后自动重新载入使设置生效
 autocmd! bufwritepost .vimrc source ~/.vimrc
 "vim对一些流行的编程语言的语法提供自动完成的功能，但是默认是没有启用。
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
@@ -90,7 +93,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeT
 "vim-Markdown插件，实现markdown高亮。
 "
 "tagbar插件显示方法属性列表
-nmap <silent> <F4> :TagbarToggle<CR>
+map <silent> <F4> :TagbarToggle<CR>
 let g:tagbar_width=30
 let g:tagbar_autofocus=1
 "
