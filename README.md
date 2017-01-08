@@ -3,7 +3,7 @@
 ```
 git clone https://github.com/wuxiwei/vim.git
 ```
-##将vim\.vimrc文件剪切到用户根目录下
+##将vim\\.vimrc文件剪切到用户根目录下
 
 ```
 mv vim/.vimrc ./
