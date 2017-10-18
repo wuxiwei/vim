@@ -62,6 +62,9 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+"粘贴格式化
+set pastetoggle=<F5>
 "vim对一些语言实现的格式化命令
 "在命令模式下直接输入“gg=G”。
 "使用 c-x c-o 补全的时候，在窗口上方会出现一个新的窗口，补全完之后依然存在。设置关闭
